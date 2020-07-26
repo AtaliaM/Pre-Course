@@ -1,0 +1,18 @@
+I chose to make a quiz which determines to which country the 
+user would like to travel after corona situation is over. :)
+I defined the possible choices to each question in a different list, 
+in arranged order by country (Japan, USA, The Netherlands or England).
+I used keyInSelect() to present each question and its available answers for the user to choose.
+To avoid the chance that the user will be able to guess
+the way the points are calculated, I decided to use the .shuffle() method from the
+underscore library to make a copy of each choices list, so the answers to each question 
+will be logged in random order.
+I set 4 variables, one for each country you could get as a result.
+To calculate the user's result, I defined a function, incrementCountryPoints,
+in which I use to check the user's answer to each question in the following way: 
+matching it to the same answer in the original arranged choices array, 
+and then incrementing the matching country total points depends on the user's answer.
+
+At the end, I use Math.max() to check which country got the highest amount of points, and log the result
+to the user accordingly. Of course there is a chance for 2 or 3 countries with the same amount of points. In this case,
+only one of them will be logged (Since in those kind of quizes we only get 1 answer).
